@@ -1,0 +1,101 @@
+div .first-div {
+	width:  75%;
+	float: right;
+	text-align: center;
+	/*height: 80%;*/
+	height: calc(100vh - 60px);
+	background-color: #bd333d;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+ .parent-div{
+	height: 900px;
+	background-color: #89c633;
+}
+
+div .second-div {
+	float: left;
+	width: 25%;
+	text-align: center;
+	background-color: #3ed198;
+	height: calc(100vh - 100px);
+	display: inline-block;
+}
+
+.example {
+	clear: both;
+}
+
+.paragraph-style{
+	position: 10px;
+}
+.questions-vote {
+	display: inline;
+}
+
+.comment-link{
+	padding-left: 30px;
+}
+
+.form-style{
+	margin-bottom: -100px;
+}
+
+.btn {
+	float: right;
+	/*margin: 10px 10px 10px 0;*/
+	background-color: #3d7ee5;
+	border-radius: 50px;
+	border: 1px solid;
+	padding: 5px 10px;
+	padding-bottom: -100px;
+
+}
+
+hr {
+	width: 50%;
+}
+
+.prev-btn {
+	float: left;
+	/*margin: 10px 0 10px 10px;*/
+	background-color: #3d7ee5;
+	border-radius: 50px;
+	border: 1px solid;
+	padding: 5px 10px;
+}
+
+/*body {
+	overflow-y: hidden;
+	line-height: 1.2;
+}*/
+/*
+div .second-div {
+	height: 40%;
+	background-color: #222
+}
+
+div .third-div {
+	height: 20%;
+	background-color: #333;
+}
+
+body .a {
+	margin: 0
+}
+
+header nav ul li {
+	text-decoration: none;
+	position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header div h1 {
+
+}*/
+
