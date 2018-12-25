@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/create-meetup.css">
+	<title>Create Meetup | Questioner</title>
+</head>
+<body>
+	<header>
+	<div class="container">
+		<div id="brand">
+			<h1 class="active">Questioner</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="./index.html" class="disabled">Home</a></li>
+				<li><a href="signup.html" class="disabled">Login / Sign-Up</a></li>
+				<li><a href="feeds.html">Feeds</a></li>
+				<li><a href="profile.html">Profile</a></li>
+				<li><a href="profile.html" class="active">Create Meetup</a></li>
+				<li><a href="#">Logout</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div>
+	<form>
+		<label>Topic
+			<input type="text" name="topic" placeholder="Topic of meetup">
+		</label>
+		<label>Location
+			<input type="text" name="location" placeholder="Location of meetup">
+		</label>
+		<label>Date
+			<input type="date" name="date" placeholder="Date of meetup">
+		</label>
+		<label>Tag
+			<input type="text" name="tags" placeholder="Meetup tags">
+		</label>
+		<input type="button" name="submit" value="Create meetup">
+	</form>
+</div>
+
+
+
+
+<footer class="footer-center">
+	<p>Questioner, Copyright &copy; 2018 </p>
+</footer>
+
+<script type="text/javascript" src="../js/create-meetup.js"></script>
+</body>
+</html>
