@@ -1,0 +1,131 @@
+
+
+
+
+body {
+	font-size: 13px;
+	font-family: Arial, sans-serif, Helvetica;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	
+
+}
+
+nav{
+	float: right;
+	margin: 0;
+}
+
+.active{
+	color: #4CAF50 
+}
+
+li a:hover {
+	color: #cccccc;
+	font-weight: bold;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	/* to disable scrollbar*/
+	overflow-y: hidden;
+}
+
+header{
+	background: #333;
+	color: #ffffff;
+	padding-top: 20px;
+	min-height: 60px;
+}
+
+header a {
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+header #brand{
+	float: left;
+	padding: 0;
+}
+
+header #brand h1 {
+	margin: 0;
+}
+
+header li{
+	display: inline;
+	margin: 0 20px 0 20px;
+
+}
+
+/* Meant for the h1 in login and signup*/
+body h1{
+  text-align: center;
+}
+
+.disabled {
+	display: none;
+}
+
+
+
+.background-pic{
+
+	background:linear-gradient(rgba(169, 249, 123, 0.32), rgba(30, 75, 4, 0.32)), url(../img/background.jpg);
+	 background-size: 600px 900px; 
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	 height: 500px;
+
+
+}
+
+.buttondiv{
+	text-align: center;
+    padding-top: 200px;
+    color: #ffffff;
+}
+
+.button{
+	border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+
+.footer-center{
+	
+	text-align: center;
+	display: block;
+	
+
+}
+
+.form-style {
+	
+display: block;
+padding-bottom: 15%;
+margin: 0 auto;
+background-color: #d4d3d1;
+
+max-width: 40%;
+}
+
+
+
+.label {
+	display: block;
+	margin: 5px;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 500px){
+	
+}
