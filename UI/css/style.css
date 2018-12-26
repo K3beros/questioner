@@ -67,8 +67,7 @@ body h1{
 }
 
 .background-pic{
-
-	background:linear-gradient(rgba(169, 249, 123, 0.32), rgba(30, 75, 4, 0.32)), url(../img/background.jpg);
+     background:linear-gradient(rgba(169, 249, 123, 0.32), rgba(30, 75, 4, 0.32)), url(../img/background.jpg);
 	 background-size: 600px 900px; 
 	 background-repeat: no-repeat;
 	 background-size: cover;
@@ -108,7 +107,6 @@ max-width: 40%;
 }
 
 /* MEDIA QUERIES */
-
 @media screen and (max-width: 500px){
 	
 }
