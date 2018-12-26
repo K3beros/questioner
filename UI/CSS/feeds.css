@@ -1,0 +1,23 @@
+body {
+	height: 400px;
+}
+
+hr {
+	width: 50%
+}
+
+section {
+	text-align: center;
+}
+
+.vote-spacing {
+	margin-left: 10px;
+}
+
+.downvote-spacing{
+	margin-left: 5px;
+}
+
+.comment-spacing {
+	margin: 20px;
+}
