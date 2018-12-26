@@ -66,17 +66,13 @@ body h1{
 	display: none;
 }
 
-
 .background-pic{
-
-	background:linear-gradient(rgba(169, 249, 123, 0.32), rgba(30, 75, 4, 0.32)), url(../img/background.jpg);
+	 background:linear-gradient(rgba(169, 249, 123, 0.32), rgba(30, 75, 4, 0.32)), url(../img/background.jpg);
 	 background-size: 600px 900px; 
 	 background-repeat: no-repeat;
 	 background-size: cover;
 	 background-position: center;
 	 height: 500px;
-
-
 }
 
 .buttondiv{
@@ -90,7 +86,6 @@ body h1{
     padding: 10px 20px;
     border-radius: 50px;
 }
-
 
 .footer-center{
 	text-align: center;
