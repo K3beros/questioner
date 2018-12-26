@@ -5,8 +5,6 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #f4f4f4;
-	
-
 }
 
 nav{
@@ -68,8 +66,6 @@ body h1{
 	display: none;
 }
 
-
-
 .background-pic{
 
 	background:linear-gradient(rgba(169, 249, 123, 0.32), rgba(30, 75, 4, 0.32)), url(../img/background.jpg);
@@ -78,8 +74,6 @@ body h1{
 	 background-size: cover;
 	 background-position: center;
 	 height: 500px;
-
-
 }
 
 .buttondiv{
@@ -96,31 +90,24 @@ body h1{
 
 
 .footer-center{
-	
 	text-align: center;
 	display: block;
-	
-
 }
 
 .form-style {
-	
 display: block;
 padding-bottom: 15%;
 margin: 0 auto;
 background-color: #d4d3d1;
-
 max-width: 40%;
 }
-
-
 
 .label {
 	display: block;
 	margin: 5px;
 }
 
-/*MEDIA QUERIES*/
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 500px){
 	
