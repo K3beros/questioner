@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index",
-    "clean":"rm -rf dist",
+    "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && cd dist && mkdir api && cd ..&& babel index.js -s -d dist && babel ./api -d dist/api",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "babel-node index.js"
   },
   "repository": {
     "type": "git",

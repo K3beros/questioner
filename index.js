@@ -16,10 +16,17 @@ app.use((req, res, next) => {
 });
 app.use((err, req, res, next) => {
 //   console.log(err);
-  res.status(err.status() || 500).send();
-  next();
+  res.status(err.status || 500);
+  res.json({
+    success: false,
+    error: {
+      message: err.message,
+    },
+  });
 });
-app.listen(5300, () => {
-  // console.log('server listening on port 5200');
+app.set('port', process.env.PORT || 8030);
+app.listen(app.get('port'), () => {
+  // eslint-disable-next-line no-console
+  console.log(`Action happening on port ${app.get('port')}`);
 });
 export default app;

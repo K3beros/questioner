@@ -16,21 +16,6 @@
 //   res.json({ status: 200, data });
 // };
 
-const meetups = [{
-  id: 1,
-  createdOn: 12,
-  location: 'abuja',
-  topic: 'Javascript for beginners',
-  happeningOn: 20,
-  tags: ['javascript', 'beginner'],
-},
-{
-  id: 2,
-  createdOn: 2,
-  location: 'lagos',
-  topic: 'python for beginners',
-  happeningOn: 0,
-  tags: ['python', 'beginner'],
-}];
+const meetups = [];
 
 export default meetups;
