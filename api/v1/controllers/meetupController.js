@@ -2,12 +2,11 @@ import meetups from '../models/meetupModel';
 
 class MeetupControllers {
   static createMeetup(req, res) {
-    if (!req.body.location) return res.json({ status: 404, error: 'No location inputted' });
-    if (!req.body.topic) return res.json({ status: 404, error: 'No topic inputted' });
-    if (!req.body.tags) return res.json({ status: 404, error: 'No tags inputted' });
-    if (!req.body.createdOn) return res.json({ status: 404, error: 'No happeningOn date inputted' });
+    if (!req.body.location && !req.body.topic && !req.body.tags && !req.body.happeningOn) {
+      return res.status(400).send({ status: 400, error: 'Missing field' });
+    }
     const {
-      location, topic, tags,
+      happeningOn, location, topic, tags,
     } = req.body;
     const day = new Date();
     const meetup = {
@@ -15,12 +14,10 @@ class MeetupControllers {
       createdOn: day.getDate(),
       location,
       topic,
-      happeningOn: day.setDate(),
+      happeningOn,
       tags,
     };
     meetups.push(meetup);
-    // eslint-disable-next-line no-console
-    console.log(meetups);
     return res.json({
       status: 200,
       data: meetups,
