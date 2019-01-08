@@ -20,8 +20,12 @@ class MeetupControllers {
     meetups.push(meetup);
     return res.json({
       status: 200,
-      data: meetups,
+      data: meetup,
     });
+  }
+
+  static getAllMeetups(req, res) {
+    return res.json({ status: 200, data: meetups })
   }
 }
 export default MeetupControllers;
