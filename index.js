@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import meetupRoute from './api/v1/routes/meetupRoute';
-import questionRoute from './api/v1/routes/questionRoute'
+import questionRoute from './api/v1/routes/questionRoute';
 // =============================
 // CUSTOM MIDDELWARES
 // =============================
@@ -25,6 +25,7 @@ app.use((err, req, res, next) => {
       message: err.message,
     },
   });
+  next();
 });
 app.set('port', process.env.PORT || 8030);
 app.listen(app.get('port'), () => {

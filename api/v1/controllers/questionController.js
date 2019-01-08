@@ -6,10 +6,11 @@ class QuestionControllers {
     if (!req.body.createdby && !req.body.meetupid && !req.body.title && !req.body.questBody) {
       return res.status(400).send({ status: 400, error: 'Missing field' });
     }
-    const meetupid = meetups.find((element) => {
-      if (element.id === req.body.meetupid) {
-        return element.id;
+    const meetupid = meetups.forEach((element) => {
+      if (element.id !== meetupid) {
+        return meetupid;
       }
+      return element.id;
     });
     if (meetups.length < 1 || req.body.meetupid !== meetupid) {
       return res.status(400).send({ status: 400, error: 'Invalid input' });
