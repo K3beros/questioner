@@ -18,6 +18,10 @@ class QuestionControllers {
       createdby, meetupid, title, questBody
  } = req.body;
   }
+
+  static getAMeetup(req, res) {
+    
+  }
 }
 
 export default QuestionControllers;

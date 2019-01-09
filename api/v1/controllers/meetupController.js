@@ -23,5 +23,17 @@ class MeetupControllers {
       data: meetups,
     });
   }
+  static getAMeetup(req, res) {
+    let meetupId = req.params.id
+    let data = []
+    meetups.forEach((element) => {
+      if(meetupId !== element.id) {
+        return res.json({ status: 404, error: 'Meetup not found' })
+      }
+      data.push(element)
+    })
+    res.json({ status: 200, data});
+
+  }
 }
 export default MeetupControllers;
