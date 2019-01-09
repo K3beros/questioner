@@ -5,4 +5,5 @@ const meetupRoute = express.Router();
 meetupRoute.route('/meetup')
   .post(MeetupControllers.createMeetup)
   .get(MeetupControllers.getAllMeetups);
+
 export default meetupRoute;
