@@ -1,5 +1,5 @@
 input[type=text], input[type=email], input[type="password"]{
-  width: 40%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
@@ -19,6 +19,13 @@ input[type=submit] {
   cursor: pointer;
 }
 
+.label {
+  padding: 10px;
+}
+
+.input {
+  margin: 10px;
+}
 
 
 /* Affects the brand styling */
@@ -28,4 +35,11 @@ div #form-div {
   padding: 20px;
 }
 
-.form-style {}
+.form-style {
+  display: block;
+  padding-bottom: 10%;
+  margin: 0 auto;
+  background-color: #467c39d5;
+  max-width: 40%;
+  border-radius: 20px;
+  }
