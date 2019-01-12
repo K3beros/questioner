@@ -1,3 +1,9 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-size: 13px;
 	font-family: Arial, sans-serif, Helvetica;
@@ -57,6 +63,20 @@ header li{
 
 }
 
+header a:hover {
+	color: #cccccc;
+	font-weight: bold;
+}
+
+.btn:link,
+ .btn:visited{
+text-transform: uppercase;
+text-decoration: none;
+display: inline-block;
+border-radius: 100px;
+transition: all .2s;
+}
+
 /* Meant for the h1 in login and signup*/
 body h1{
   text-align: center;
@@ -77,10 +97,34 @@ body h1{
 
 .buttondiv{
 	text-align: center;
-    padding-top: 200px;
+    padding-top: 120px;
     color: #ffffff;
 }
 
+.button-form {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+}
+
+.btn:active {
+	transform: translateY(-1px);
+}
+
+.btn-white {
+	background-color: #ffffff;
+	color: #777;
+	padding: 15px 40px;
+}
+
+.primary-head {
+	font-weight: 400;
+	font-size: 60px;
+	text-transform: uppercase;
+}
 .button{
 	border: 1px solid;
     padding: 10px 20px;
@@ -91,6 +135,7 @@ body h1{
 .footer-center{
 	text-align: center;
 	display: block;
+	padding-top: 25px;
 }
 
 .form-style {
