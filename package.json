@@ -8,7 +8,7 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && cd dist && mkdir api && cd ..&& babel index.js -s -d dist && babel ./api -d dist/api",
     "test": "mocha test/meetup --require babel-core/register --exit",
-    "dev": "babel-node index.js",
+    "dev": "babel-watch index.js",
     "test-build": "cd dist && mkdir testbabel test/ -d dist && test-start",
     "dev-test": "mocha 10000",
     "test-mocha": "mocha --timeout 5000"
@@ -37,6 +37,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-watch": "^2.0.8",
     "coveralls": "^3.0.2",
     "eslint": "^5.11.1",
     "eslint-config-airbnb-base": "^13.1.0",
