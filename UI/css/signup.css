@@ -14,7 +14,7 @@ header{
 
 
 input[type=text], input[type=email], input[type="password"], input[type="tel"]{
-  width: 40%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
@@ -38,9 +38,18 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
+input[type=button]{
+  margin: 5px;
+  display: block;
+}
+
+input[type=radio]{
+  margin: 10px;
+}
+
+.div {
+  border-radius: 20px;
+  background-color: #4f8131a9;
   padding: 20px;
 }
 
