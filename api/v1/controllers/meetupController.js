@@ -1,7 +1,7 @@
 import moment from 'moment'
 import meetups from '../models/meetupModel';
 
-const data = []
+const data = [];
 class MeetupControllers {
   static createMeetup(req, res) {
     if (!req.body.location && !req.body.topic && !req.body.tags && !req.body.happeningOn) {
@@ -10,10 +10,10 @@ class MeetupControllers {
     const {
       happeningOn, location, topic, tags,
     } = req.body;
-    const date = moment()
+    const date = moment();
     const meetup = {
       id: meetups.length + 1,
-      createdOn: date.format('YYYY-MM-DD'),,
+      createdOn: date.format('YYYY-MM-DD'),
       location,
       topic,
       happeningOn,
