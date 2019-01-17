@@ -1,4 +1,4 @@
-import moment from 'moment'
+import moment from 'moment';
 import meetups from '../models/meetupModel';
 
 const data = [];
