@@ -1,5 +1,7 @@
+import moment from 'moment';
 import meetups from '../models/meetupModel';
 
+const data = [];
 class MeetupControllers {
   static createMeetup(req, res) {
     if (!req.body.location && !req.body.topic && !req.body.tags && !req.body.happeningOn) {
@@ -8,24 +10,24 @@ class MeetupControllers {
     const {
       happeningOn, location, topic, tags,
     } = req.body;
-    const day = new Date();
+    const date = moment();
     const meetup = {
       id: meetups.length + 1,
-      createdOn: day.getDate(),
+      createdOn: date.format('YYYY-MM-DD'),
       location,
       topic,
       happeningOn,
       tags,
     };
-    meetups.push(meetup);
+    data.push(meetup);
     return res.json({
       status: 200,
-      data: meetup,
+      data,
     });
   }
 
   static getAllMeetups(req, res) {
-    return res.json({ status: 200, data: meetups })
+    return res.json({ status: 200, data: meetups });
   }
 }
 export default MeetupControllers;
