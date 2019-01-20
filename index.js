@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/api/v1', meetupRoute);
-app.use('/api/v1', questionRoute);
+// app.use('/api/v1', questionRoute);
 // ERROR HANDLER MIDDELWARE
 app.use((req, res, next) => {
   const err = new Error('Not Found');
