@@ -25,5 +25,12 @@ class MeetupControllers {
       data,
     });
   }
+
+  static getAllMeetups(req, res) {
+    return res.json({
+      status: 200,
+      data: meetups,
+    });
+  }
 }
 export default MeetupControllers;
