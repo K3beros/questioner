@@ -32,5 +32,21 @@ class MeetupControllers {
       data: meetups,
     });
   }
+
+  static getAMeetup(req, res) {
+    if (!req.params.id) return res.status(400).send({ status: 404, error: 'No meetup id inputted' });
+    const meetupid = req.params.id;
+    meetups.forEach((element) => {
+      if (meetupid === element.id) {
+        console.log(element.id);
+        data.push(element);
+        console.log(element.id);
+      }
+      console.log(element);
+      return res.json({ status: 400, error: 'Could not find meetup' });
+    });
+
+    return res.json({ status: 200, data });
+  }
 }
 export default MeetupControllers;

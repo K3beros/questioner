@@ -6,7 +6,8 @@ meetupRoute.route('/meetup')
   .post(MeetupControllers.createMeetup)
   .get(MeetupControllers.getAllMeetups);
 
-
+meetupRoute.route('/meetup/:id')
+  .get(MeetupControllers.getAMeetup)
 export default meetupRoute;
 
 
