@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line import/no-mutable-exports
 const meetups = [
   {
     id: 1,
@@ -7,14 +8,6 @@ const meetups = [
     topic: 'All things web',
     happeningOn: 1569874548975,
     tags: ['web', 'programming'],
-  },
-  {
-    id: 2,
-    createdOn: '2018-4-1',
-    location: 'Island',
-    topic: 'How to strip a chicken off its feather',
-    happeningOn: 1547626412358,
-    tags: ['food', 'drinks'],
   },
 ];
 

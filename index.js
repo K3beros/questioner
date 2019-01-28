@@ -24,6 +24,7 @@ app.use((err, req, res, next) => {
       message: err.message,
     },
   });
+  next(err);
 });
 app.set('port', process.env.PORT || 8030);
 app.listen(app.get('port'), () => {
