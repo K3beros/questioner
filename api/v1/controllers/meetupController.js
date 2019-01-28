@@ -37,13 +37,15 @@ class MeetupControllers {
 
   static getAMeetup(req, res) {
     // eslint-disable-next-line radix
+    const data = [];
     const id = parseInt(req.params.id, 10);
     const meet = meetups.find(meetup => meetup.id === id);
     if (meet) {
+      data.push(meet);
       console.log(meet);
-      res.json({
+      return res.json({
         status: 200,
-        meet,
+        data,
       });
     }
     console.log(meet);
