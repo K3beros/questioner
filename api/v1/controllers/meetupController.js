@@ -56,7 +56,7 @@ class MeetupControllers {
     const data = [];
     const currentDate = new Date().getTime();
     const meetup = meetups.map((meet) => {
-      console.log(typeof meet.happeningOn)
+      console.log(typeof meet.happeningOn);
       const meetupDate = meet.happeningOn.getTime();
       console.log(meetupDate);
       if (meetupDate > currentDate) {
@@ -68,6 +68,16 @@ class MeetupControllers {
       return res.json({ status: 200, data });
     }
     return res.status(404).send({ err: 'No upcoming meetups' });
+  }
+
+  static deleteMeetup(req, res) {
+    const id = parseInt(req.params.id, 10);
+    meetups.map((meetup, index) => {
+      if (meetup.id === id);
+      meetups.splice(index, 1);
+      return res.json({ status: 200, message: 'Meetup deleted' });
+    });
+    return res.status(404).send({ status: 404, err: 'No meetups found' });
   }
 }
 export default MeetupControllers;
