@@ -9,15 +9,14 @@ class MeetupControllers {
       return res.status(400).send({ status: 400, error: 'Missing field' });
     }
     const {
-      happeningOn, location, topic, tags,
+      location, topic, tags,
     } = req.body;
-    const date = moment();
     const meetup = {
       id: meetups.length + 1,
-      createdOn: date.format('YYYY-MM-DD'),
+      createdOn: new Date().toDateString(),
       location,
       topic,
-      happeningOn,
+      happeningOn: new Date(req.body.happeningOn),
       tags,
     };
     console.log(meetup);
@@ -32,7 +31,7 @@ class MeetupControllers {
   static getAllMeetups(req, res) {
     console.log(meetups);
     res.status(200)
-      .json(meetups);
+      .json({ data: meetups });
   }
 
   static getAMeetup(req, res) {
@@ -51,6 +50,24 @@ class MeetupControllers {
     console.log(meet);
     return res.status(400).send({ err: 'No meetup found' });
     // eslint-disable-next-line no-console
+  }
+
+  static getUpcomingMeetups(req, res) {
+    const data = [];
+    const currentDate = new Date().getTime();
+    const meetup = meetups.map((meet) => {
+      console.log(typeof meet.happeningOn)
+      const meetupDate = meet.happeningOn.getTime();
+      console.log(meetupDate);
+      if (meetupDate > currentDate) {
+        data.push(meet);
+      }
+      return meet;
+    });
+    if (meetup) {
+      return res.json({ status: 200, data });
+    }
+    return res.status(404).send({ err: 'No upcoming meetups' });
   }
 }
 export default MeetupControllers;
