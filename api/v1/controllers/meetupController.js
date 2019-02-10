@@ -16,9 +16,10 @@ class MeetupControllers {
       createdOn: new Date().toDateString(),
       location,
       topic,
-      happeningOn: new Date(req.body.happeningOn),
+      happeningOn: new Date(req.body.happeningOn).toDateString(),
       tags,
     };
+    console.log();
     console.log(meetup);
     meetups.push(meetup);
     data.push(meetup);
@@ -68,6 +69,28 @@ class MeetupControllers {
       return res.json({ status: 200, data });
     }
     return res.status(404).send({ err: 'No upcoming meetups' });
+  }
+
+  static editMeetup(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const index = meetups.findIndex(meetup => meetup.id === id);
+    console.log(index);
+    const {
+      location, topic, tags,
+    } = req.body;
+    const meet = {
+      id,
+      location,
+      topic,
+      happeningOn: new Date(req.body.happeningOn).toDateString(),
+      tags,
+    };
+    console.log(meet);
+    meetups.splice(index, 1, meet);
+    if (index) {
+      return res.json({ status: 200, data: meet });
+    }
+    return res.status(404).send({ err: 'No meetup found' });
   }
 
   static deleteMeetup(req, res) {
