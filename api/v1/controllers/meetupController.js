@@ -5,7 +5,7 @@ import meetups from '../models/meetupModel';
 class MeetupControllers {
   static createMeetup(req, res) {
     const data = [];
-    if (!req.body.location && !req.body.topic && !req.body.tags && !req.body.happeningOn) {
+    if (!req.body.location || !req.body.topic || !req.body.happeningOn) {
       return res.status(400).send({ status: 400, error: 'Missing field' });
     }
     const {
@@ -23,8 +23,7 @@ class MeetupControllers {
     console.log(meetup);
     meetups.push(meetup);
     data.push(meetup);
-    return res.json({
-      status: 201,
+    return res.status(201).json({
       data: meetups,
     });
   }
@@ -36,7 +35,6 @@ class MeetupControllers {
   }
 
   static getAMeetup(req, res) {
-    // eslint-disable-next-line radix
     const data = [];
     const id = parseInt(req.params.id, 10);
     const meet = meetups.find(meetup => meetup.id === id);
@@ -44,7 +42,7 @@ class MeetupControllers {
       data.push(meet);
       console.log(meet);
       return res.json({
-        status: 200,
+        status: 201,
         data,
       });
     }
@@ -94,13 +92,13 @@ class MeetupControllers {
   }
 
   static deleteMeetup(req, res) {
-    const id = parseInt(req.params.id, 10);
-    meetups.map((meetup, index) => {
-      if (meetup.id === id);
-      meetups.splice(index, 1);
-      return res.json({ status: 200, message: 'Meetup deleted' });
-    });
-    return res.status(404).send({ status: 404, err: 'No meetups found' });
+    const meetId = meetups.find(meetup => meetup.id === parseInt(req.params.id, 10));
+    if (!meetId) {
+      res.status(404).send({ err: `The meetup with id ${req.params.id} was not found` });
+    }
+    const index = meetups.indexOf(meetId);
+    meetups.splice(index, 1);
+    return res.json({ status: 200, data: meetups });
   }
 }
 export default MeetupControllers;

@@ -12,19 +12,18 @@ app.use('/api/v1', meetupRoute);
 // ERROR HANDLER MIDDELWARE
 app.use((req, res, next) => {
   const err = new Error('Not Found');
-  err.status = '404';
+  err.status = 404;
   next(err);
 });
 app.use((err, req, res, next) => {
 //   console.log(err);
   res.status(err.status || 500);
-  res.json({
+  return res.json({
     success: false,
-    error: {
+    err: {
       message: err.message,
     },
   });
-  next(err);
 });
 app.set('port', process.env.PORT || 8030);
 app.listen(app.get('port'), () => {
