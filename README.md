@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.com/K3beros/questioner.svg?branch=develop)](https://travis-ci.com/K3beros/questioner)
 
 ## questioner
 
