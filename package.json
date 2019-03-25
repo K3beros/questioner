@@ -5,23 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index",
-    "coverage": "nyc --reporter=html --reporter=text-lcov npm test",
+    "coverage": "nyc report ---reporter=text-lcov | coveralls ",
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && cd dist && mkdir api && cd ..&& babel index.js -s -d dist && babel ./api -d dist/api",
-    "test": "mocha test --require babel-core/register --timeout 10000 --exit",
+    "test": "nyc --reporter=html --reporter=text mocha build/server/v1/**/*.test.js --timeout 10000 --exit",
     "dev": "babel-watch index.js",
     "test-build": "cd dist && mkdir testbabel test/ -d dist && test-start",
     "dev-test": "mocha 10000",
     "test-mocha": "mocha --timeout 5000"
   },
-  "nyc": {
-    "register": "babel-register",
-    "include": [
-      "**/*.js",
-      "./*.js"
-    ],
-    "all": true
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/K3beros/questioner.git"

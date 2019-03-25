@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">52.63% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/19</span>
+        <span class='fraction'>0/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">52.94% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>9/17</span>
+        <span class='fraction'>0/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/18</span>
+        <span class='fraction'>0/17</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -94,25 +94,25 @@
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,49 +141,49 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class MeetupValidation {
-  static createMeetup(req, res, next) {
+<span class="fstat-no" title="function not covered" >  st</span>atic createMeetup(req, res, next) {
     const {
       location, happeningOn,
-    } = req.body;
-    const inputHappeningOn = /^(20[0-9]{2})[-/](0|1[0-2])[-/](3[01]|2[0-9]|1[0-9]|0[1-9])$/g;
-    if (typeof location !== 'string' || location.trim() === '') {
-      return res.status(400).json({
+    } = <span class="cstat-no" title="statement not covered" >req.body;</span>
+    const inputHappeningOn = <span class="cstat-no" title="statement not covered" >/^(20[0-9]{2})[-/](0|1[0-2])[-/](3[01]|2[0-9]|1[0-9]|0[1-9])$/g;</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof location !== 'string' || location.trim() === '') {</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({</span>
         status: 400,
         message: 'Enter a valid format. e.g 9 Oba Akran, Lagos',
       });
     }
-    if (typeof happeningOn !== 'string' || happeningOn.trim() === '' || inputHappeningOn.test(happeningOn)) {
-      console.log(req.body.happeningOn);
-      return res.status(400).json({
+<span class="cstat-no" title="statement not covered" >    if (typeof happeningOn !== 'string' || happeningOn.trim() === '' || inputHappeningOn.test(happeningOn)) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log(req.body.happeningOn);</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({</span>
         status: 400,
         message: 'Enter a valid format YYYY-MM-DD e.g 2019/1/1, 2019/01/01',
       });
     }
-    return next();
+<span class="cstat-no" title="statement not covered" >    return next();</span>
   }
 &nbsp;
-  static getAMeetup(req, res, next) {
+<span class="fstat-no" title="function not covered" >  st</span>atic getAMeetup(req, res, next) {
     // const id = parseInt(req.params.id, 10);
     const inputId = <span class="cstat-no" title="statement not covered" >/^([0-9]{2})$/;</span>
 <span class="cstat-no" title="statement not covered" >    if (typeof parseInt(req.params.id, 10) !== 'number' || inputId.test(parseInt(req.params.id, 10))) {</span>
-<span class="cstat-no" title="statement not covered" >      return r</span>es.json({
+<span class="cstat-no" title="statement not covered" >      return res.json({</span>
         status: 400,
         message: 'Enter a valid format e.g 3, 22',
       });
     }
-<span class="cstat-no" title="statement not covered" >    return n</span>ext();
+<span class="cstat-no" title="statement not covered" >    return next();</span>
   }
 &nbsp;
-  static deleteAMeetup(req, res, next) {
-    const id = <span class="cstat-no" title="statement not covered" >parseInt(r</span>eq.params.id, 10);
+<span class="fstat-no" title="function not covered" >  st</span>atic deleteAMeetup(req, res, next) {
+    const id = <span class="cstat-no" title="statement not covered" >parseInt(req.params.id, 10);</span>
     const inputId = <span class="cstat-no" title="statement not covered" >/^(\/D{2})$/;</span>
 <span class="cstat-no" title="statement not covered" >    if (typeof id !== 'number' || inputId.test(id)) {</span>
-<span class="cstat-no" title="statement not covered" >      return r</span>es.json({
+<span class="cstat-no" title="statement not covered" >      return res.json({</span>
         status: 400,
         message: 'Enter a valid format e.g 3, 22',
       });
     }
-<span class="cstat-no" title="statement not covered" >    return n</span>ext();
+<span class="cstat-no" title="statement not covered" >    return next();</span>
   }
 }
 export default MeetupValidation;
@@ -193,7 +193,7 @@ export default MeetupValidation;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Mar 07 2019 16:28:12 GMT+0100 (West Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 10 2019 07:18:50 GMT+0100 (West Africa Standard Time)
 </div>
 </div>
 <script src="..\..\..\..\prettify.js"></script>
