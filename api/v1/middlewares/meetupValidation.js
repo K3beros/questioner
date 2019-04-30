@@ -4,12 +4,12 @@ class MeetupValidation {
       location, happeningOn,
     } = req.body;
     const inputHappeningOn = /^(20[0-9]{2})[-/](0|1[0-2])[-/](3[01]|2[0-9]|1[0-9]|0[1-9])$/g;
-    if (typeof location !== 'string' || location.trim() === '') {
-      return res.status(400).json({
-        status: 400,
-        message: 'Enter a valid format. e.g 9 Oba Akran, Lagos',
-      });
-    }
+    // if (typeof location !== 'string' || location.trim() === '') {
+    //   return res.status(400).json({
+    //     status: 400,
+    //     message: 'Enter a valid format. e.g 9 Oba Akran, Lagos',
+    //   });
+    // }
     if (typeof happeningOn !== 'string' || happeningOn.trim() === '' || inputHappeningOn.test(happeningOn)) {
       console.log(req.body.happeningOn);
       return res.status(400).json({

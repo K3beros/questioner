@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import meetupRoute from './api/v1/routes/meetupRoute';
+import userRoute from './api/v1/routes/userRoute'
 // =============================
 // CUSTOM MIDDELWARES
 // =============================
@@ -8,6 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/api/v1', meetupRoute);
+app.use('/api/v1', userRoute);
 // app.use('/api/v1', questionRoute);
 // ERROR HANDLER MIDDELWARE
 app.use((req, res, next) => {
